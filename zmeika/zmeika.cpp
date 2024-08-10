@@ -80,8 +80,8 @@ int main() {
 
     setlocale(LC_ALL, "Russian"); // русская мова
     srand(time(0)); // с сишки спиздил(рандомчик)
-
-    SnakeOX[0] = WIDTH / 2;
+     //чтоб змейка ползала красиво(не пон как работает) 
+    SnakeOX[0] = WIDTH / 2; 
     SnakeOY[0] = HEIGHT / 2;
     double time = clock();
 
@@ -113,7 +113,7 @@ int main() {
             }
         }
 
-        if ((clock() - time) / CLOCKS_PER_SEC >= 0.2) {
+        if ((clock() - time) / CLOCKS_PER_SEC >= 0.2) { // вот так работает норм что за часики я хз)
             time = clock();
             if (SnakeOX[0] == FoodOX && SnakeOY[0] == FoodOY) {
                 ++SnakeLEN;
